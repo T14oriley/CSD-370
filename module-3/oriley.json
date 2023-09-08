@@ -1,0 +1,385 @@
+{
+  "version": "2.0.4",
+  "summary": {
+    "title": "Assignment 3 Model",
+    "owner": "Tyler O'Riley",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Matthew Longley"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "CSD370",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.0.4",
+        "cells": [
+          {
+            "position": {
+              "x": 280,
+              "y": 50
+            },
+            "size": {
+              "width": 1109.3333333333335,
+              "height": 520
+            },
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "1637929d-b1e7-44f4-ac76-5cbc27fda9db",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 30,
+              "y": 240
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Browser"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "id": "cfd5c5fa-435e-4539-a651-b14638d1806e",
+            "data": {
+              "type": "tm.Process",
+              "name": "Browser",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 322,
+              "y": 240
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Web Service"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "id": "fc16523d-9a8c-4f5c-80be-e38a4c5042db",
+            "data": {
+              "type": "tm.Process",
+              "name": "Web Service",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL Commands",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "d7561c33-e0ad-4470-a6b8-370b0caf942e",
+            "labels": [
+              "SQL Commands"
+            ],
+            "source": {
+              "cell": "fc16523d-9a8c-4f5c-80be-e38a4c5042db"
+            },
+            "target": {
+              "x": 980,
+              "y": 230
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 180
+              },
+              {
+                "x": 640,
+                "y": 140
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "2547789a-0f36-48a6-9132-664223f21539",
+            "labels": [
+              "HTTPS"
+            ],
+            "source": {
+              "cell": "cfd5c5fa-435e-4539-a651-b14638d1806e"
+            },
+            "target": {
+              "cell": "fc16523d-9a8c-4f5c-80be-e38a4c5042db"
+            },
+            "vertices": [
+              {
+                "x": 160,
+                "y": 190
+              },
+              {
+                "x": 230,
+                "y": 160
+              },
+              {
+                "x": 290,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "2b7ad31f-26dc-4fe3-97c5-864a3a749055",
+            "labels": [
+              "HTTPS"
+            ],
+            "source": {
+              "cell": "fc16523d-9a8c-4f5c-80be-e38a4c5042db"
+            },
+            "target": {
+              "cell": "cfd5c5fa-435e-4539-a651-b14638d1806e"
+            },
+            "vertices": [
+              {
+                "x": 230,
+                "y": 410
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "DB Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "4f4c7860-7d91-49ed-9e37-804bae092b8b",
+            "labels": [
+              "DB Response"
+            ],
+            "source": {
+              "cell": "1541baa9-49bb-4422-8a70-edd357f477cf"
+            },
+            "target": {
+              "cell": "fc16523d-9a8c-4f5c-80be-e38a4c5042db"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 470
+              },
+              {
+                "x": 490,
+                "y": 410
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 990,
+              "y": 235
+            },
+            "size": {
+              "width": 220,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "SQL Database"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "1541baa9-49bb-4422-8a70-edd357f477cf",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "SQL Database",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0d5da52a-3e12-4c1b-868b-e61539e22a5d",
+                  "title": "Unauthorized User",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "This threat attempts to alter file data",
+                  "mitigation": "implement a token system so users must have privilege to alter files",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "ee1650b6-38b0-4759-bd4e-c3b62dd1caff",
+                  "title": "DDoS",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "an attempt is being made to bombard the service with repeating requests",
+                  "mitigation": "Implement authenticator that must be completed before requests can be made",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 3
+  }
+}
